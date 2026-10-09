@@ -1,0 +1,29 @@
+{
+  "name": "older-shells-ck",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Local-first legacy executable analysis and static unpacking workbench",
+  "license": "Apache-2.0",
+  "author": "Henglie",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node src/server/http.js",
+    "mcp": "node src/server/mcp.js",
+    "test": "node --test tests/*.test.js",
+    "test:live": "node scripts/run-live-tests.mjs",
+    "test:e2e": "playwright test",
+    "vendor:die": "node scripts/vendor-die.mjs"
+  },
+  "dependencies": {
+    "@material/web": "2.5.0",
+    "@material/material-color-utilities": "0.4.0",
+    "@modelcontextprotocol/sdk": "1.32.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "@playwright/test": "1.63.0"
+  }
+}

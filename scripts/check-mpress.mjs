@@ -1,0 +1,14 @@
+import { readFile } from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import { unpackMpress, supportsMpress } from '../src/core/unpackers/mpress.js';
+import { parsePE } from '../src/core/pe.js';
+import { sha256 } from '../src/core/bytes.js';
+const input = new Uint8Array(await readFile(new URL('../test-results/fixtures/mpress.exe', import.meta.url)));
+const pe = parsePE(input);
+console.log({ format: pe.format, sections: pe.sections, ep: pe.entryPointOffset, warnings: pe.warnings, supported: supportsMpress(input, pe) });
+const result = unpackMpress(input);
+const output = parsePE(result.bytes);
+assert.equal(output.entryPointRva, result.metadata.originalEntryPoint);
+assert.equal(output.warnings.length, 0);
+assert.ok(output.imports.length > 0);
+console.log({ metadata: result.metadata, size: result.bytes.length, sha256: await sha256(result.bytes), imports: output.imports });

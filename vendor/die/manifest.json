@@ -1,0 +1,59 @@
+{
+  "repository": "horsicq/Detect-It-Easy",
+  "commit": "11cb5cb00f8763426005914ed3d983e729760749",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "be0fe2d727cd0a754fb0b2fdc579ead8f19ef575840b4daef221be201701eaad"
+    },
+    {
+      "path": "db/PE/packer_FSG.2.sg",
+      "sha256": "0a911be7bb4ec6a83353ef15bb20be3db4487d70552c756a9d8f2ed9bba93fcd"
+    },
+    {
+      "path": "db/PE/packer_UPX.2.sg",
+      "sha256": "dc22e6b7d1950c2ea919b19925b56796b060dd9b2f40b9a9456af1d2d10449d2"
+    },
+    {
+      "path": "db/PE/packer_MPRESS.2.sg",
+      "sha256": "ffefd3e8e05aab28e37797e4a77bd469eb16e0a128cc20d8b0c3c3f390e70929"
+    },
+    {
+      "path": "db/PE/packer_ASPack.2.sg",
+      "sha256": "cc79344b5e30a8400e47954c6924bcbc1a48e01c900dfd66cc45a406d466f8ac"
+    },
+    {
+      "path": "db/PE/packer_Petite.2.sg",
+      "sha256": "8fb6ff88d901daf5647b4702dacd85a4f161446de0b4d8643a1b3d5f2c4aec3d"
+    },
+    {
+      "path": "db/PE/packer_MEW.2.sg",
+      "sha256": "8511306b5a719e40bb5c98dc360dc1066e99193891f6aa68b6fa87d435d80ae7"
+    },
+    {
+      "path": "db/PE/packer_PECompact.2.sg",
+      "sha256": "c67dcbcbb529a59de568c09d6339f7f480b592a106ed539024e2afad854e5bc4"
+    },
+    {
+      "path": "db/PE/packer_RLPack.2.sg",
+      "sha256": "aa79fc37af4d4da3542ad89510d1bf0b0b56c82d9dc8057656c2242baef7a4e6"
+    },
+    {
+      "path": "db/PE/protector_tElock.2.sg",
+      "sha256": "790ffbc5a025a069dab7c99fa0c6499d17d594a6e14aa617023b3535e62755e2"
+    },
+    {
+      "path": "db/PE/protector_PELock.2.sg",
+      "sha256": "3c893a0edd7bae5ba34d614df3107a447f3bc8fbcd5679bdaa05ec633caf002b"
+    },
+    {
+      "path": "db/PE/packer_NsPack.2.sg",
+      "sha256": "fe7f4928bf81ccfc659f5fe1125f86fc0ab48d81e7db342ab3a2e8bf9b944e1c"
+    },
+    {
+      "path": "db/PE/packer_WinUpack.2.sg",
+      "sha256": "420f0bed8121ab916d7e686065601a878bb283851101258a0efc31fa0a9cbfdf"
+    }
+  ]
+}

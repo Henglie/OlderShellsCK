@@ -1,0 +1,213 @@
+OlderShellsCK / 老壳通解机
+Copyright 2026 Henglie
+
+Original project code and documentation are licensed under Apache-2.0.
+The complete license is in LICENSE. Third-party works retain their own
+copyrights and licenses. These notices do not modify those licenses.
+
+1. Official Google Material components, colors and icons
+
+- @material/web 2.5.0: Apache-2.0, Google LLC.
+  https://github.com/material-components/material-web
+  Installed license: node_modules/@material/web/LICENSE
+  Official Material 3 Web Components used by the browser interface.
+  Dependency status: the upstream README states that Material Web is in
+  maintenance mode pending new maintainers:
+  https://github.com/material-components/material-web/discussions/5642
+
+- @material/material-color-utilities 0.4.0: Apache-2.0, Google LLC.
+  https://github.com/material-foundation/material-color-utilities
+  Installed license: node_modules/@material/material-color-utilities/LICENSE
+  Official HCT, SchemeTonalSpot and dynamic color roles used for themes.
+
+- Material Symbols Rounded: Apache-2.0, Google LLC.
+  https://github.com/google/material-design-icons
+  https://github.com/google/material-design-icons/blob/master/LICENSE
+  Official SVG icon paths are embedded in src/web/icons.js; this is icon
+  artwork attribution, not a claim that a remote icon font is required.
+
+The Apache-2.0 terms for these components are reproduced in LICENSE.
+Upstream per-file copyright and license headers remain applicable.
+
+2. Lit dependency closure
+
+Material Web depends on Lit and @lit/context. The locked Lit dependency
+closure includes lit, lit-element, lit-html, @lit/reactive-element,
+@lit/context and @lit-labs/ssr-dom-shim, under BSD-3-Clause.
+Source: https://github.com/lit/lit
+Resolved versions and integrity hashes: package-lock.json.
+
+lit, lit-element, lit-html, @lit/reactive-element:
+Copyright (c) 2017 Google LLC. All rights reserved.
+@lit/context:
+Copyright (c) 2021 Google LLC. All rights reserved.
+@lit-labs/ssr-dom-shim source headers:
+Copyright 2019 Google LLC
+Copyright 2023 Google LLC
+Copyright 2024 Google LLC
+
+BSD 3-Clause License
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its
+   contributors may be used to endorse or promote products derived from
+   this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Material Web also depends on tslib (0BSD), Microsoft Corporation:
+https://github.com/microsoft/tslib
+
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+The Lit type dependency @types/trusted-types is MIT-licensed; its installed
+LICENSE and package-lock.json identify the exact package. Type declarations
+are not a browser runtime engine.
+
+3. Detect It Easy rule subset
+
+Source: https://github.com/horsicq/Detect-It-Easy
+Fixed commit: 11cb5cb00f8763426005914ed3d983e729760749
+License: MIT; complete original text: vendor/die/LICENSE.
+Copyright (c) 2012-2026 hors<horsicq@gmail.com>
+Selected rule authors credited by the adapter: horsicq, ajax, adoxa, DosX.
+
+vendor/die/manifest.json records the fixed commit and SHA-256 of the
+original LICENSE and these original .sg files:
+  vendor/die/db/PE/packer_FSG.2.sg
+  vendor/die/db/PE/packer_UPX.2.sg
+  vendor/die/db/PE/packer_MPRESS.2.sg
+  vendor/die/db/PE/packer_ASPack.2.sg
+  vendor/die/db/PE/packer_Petite.2.sg
+  vendor/die/db/PE/packer_MEW.2.sg
+  vendor/die/db/PE/packer_PECompact.2.sg
+  vendor/die/db/PE/packer_RLPack.2.sg
+  vendor/die/db/PE/protector_tElock.2.sg
+  vendor/die/db/PE/protector_PELock.2.sg
+  vendor/die/db/PE/packer_NsPack.2.sg
+  vendor/die/db/PE/packer_WinUpack.2.sg
+
+vendor/die/fsg-patterns.json contains 44 derived FSG entry-point patterns.
+vendor/die/entry-patterns.json contains 61 additional direct-entry branches:
+ASPack 14, Petite 11, MEW 4, PECompact 8, RLPack 2 (EXE form only), tElock 5,
+PELock 1, NsPack 6 and (Win)Upack 10. Relative-jump/string-pattern branches,
+post-match version overrides and other fallbacks are not represented there.
+src/core/detect.js translates selected FSG/UPX/MPRESS branches into bounded
+JavaScript and labels separate section-name heuristics. These adaptations
+are a documented subset, not the complete DIE engine or database.
+
+4. RetDec-derived LZMAT decoding and MPRESS reconstruction
+
+Source: https://github.com/avast/retdec
+Fixed commit: 9450585772e6f1c18e5f0b2ad5518a18d6bce71e
+License: MIT; complete original text: licenses/retdec-MIT.txt.
+Copyright (c) 2017 Avast Software
+
+src/core/codecs/lzmat.js is a bounded JavaScript adaptation of:
+  src/unpacker/decompression/lzmat/lzmat_data.cpp
+src/core/unpackers/mpress.js adapts MPRESS layout, CALL/JMP restoration and
+PE reconstruction logic from:
+  src/unpackertool/plugins/mpress/mpress.cpp
+
+The project implements the selected PE32 LZMAT stub 0x29f / fix 0x35 path.
+It does not incorporate the complete RetDec distribution or claim support
+for all RetDec plugins, MPRESS variants or runtime behavior.
+
+src/core/codecs/nrv.js adapts RetDec NRV2B/2D/2E LE32 decoders and bit readers.
+src/core/unpackers/upx.js adapts PE header/import/relocation hint and unfilter
+semantics from src/unpackertool/plugins/upx/ at the same fixed MIT revision.
+PE acceptance is limited to the documented NRV2B short-stub/filter-0x26
+analysis-only output. The GPL UPX/UCL/ClamAV implementations are not bundled.
+
+4a. XStaticUnpacker-derived FSG decoding and layout
+
+Source: https://github.com/horsicq/XStaticUnpacker
+Fixed commit: 746fb24433c29b6460edebac83fdad19909d9e81
+License: MIT; complete original text: licenses/xstaticunpacker-MIT.txt.
+Repository notice: Copyright (c) 2019-2026 hors<horsicq@gmail.com>
+xfsg.cpp/h source notice: Copyright (c) 2017-2026 hors<horsicq@gmail.com>
+
+src/core/codecs/fsg.js and src/core/unpackers/fsg.js adapt the decoder and
+support-table layout from xfsg.cpp/h. The source notices are retained.
+The project validates limited plaintext 1.31/1.33 stubs and produces an
+analysis PE, without claiming recovered imports or a runnable executable.
+Detailed source/history and upstream provenance statements are preserved in
+docs/research/fsg-implementation.md. License-unknown GUI decompilations are
+research evidence only and are not copied into the distributable runtime.
+
+5. MCP SDK and Zod
+
+@modelcontextprotocol/sdk: MIT, https://github.com/modelcontextprotocol/typescript-sdk
+Copyright (c) 2024 Anthropic, PBC
+Installed original license: node_modules/@modelcontextprotocol/sdk/LICENSE
+
+zod: MIT, https://github.com/colinhacks/zod
+Copyright (c) 2025 Colin McDonnell
+Installed original license: node_modules/zod/LICENSE
+
+MIT terms below apply separately to each of these two works, with its
+respective copyright notice above:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+6. Dependency and research provenance
+
+package.json declares direct dependencies; package-lock.json records exact
+npm resolutions and integrity hashes, including transitive dependencies.
+The lockfile is a provenance index, not a replacement for license texts.
+Redistributions containing npm packages must retain their applicable
+LICENSE/NOTICE files and per-file notices. Build/test tooling includes
+esbuild (MIT) and Playwright (Apache-2.0), with their own dependency notices.
+
+The private research directory 资料/ and downloaded test-results/fixtures/
+are ignored and excluded from project releases. The reference MPRESS file
+is fetched separately from unipacker/unipacker at commit
+160baa9447c91d53b75e5e108b196d389fa0b06e; its provenance is recorded by
+scripts/fetch-fixtures.mjs. Neither research binaries nor test fixtures
+are relicensed as Apache-2.0 by this project. The research reports link to
+additional tools; a research citation does not mean their code is shipped.

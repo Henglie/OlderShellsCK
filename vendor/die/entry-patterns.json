@@ -1,0 +1,371 @@
+[
+  {
+    "family": "ASPack",
+    "source": "db/PE/packer_ASPack.2.sg",
+    "coverage": "direct-entry-byte-patterns-only",
+    "patterns": [
+      {
+        "pattern": "60E8000000005D81ED........B8........03C5",
+        "version": "1.00b-1.07b",
+        "options": ""
+      },
+      {
+        "pattern": "60EB..5DEB..FF..........E9",
+        "version": "1.08.00-1.08.02",
+        "options": ""
+      },
+      {
+        "pattern": "60E8000000005D............BB........03DD",
+        "version": "1.08.03",
+        "options": ""
+      },
+      {
+        "pattern": "60E8000000005D81ed........BB........01eb",
+        "version": "1.08.X",
+        "options": "possibly"
+      },
+      {
+        "pattern": "60E841060000EB41",
+        "version": "1.08.04",
+        "options": ""
+      },
+      {
+        "pattern": "60EB..5DFFE5E8........81ED........BB........03DD2B9D",
+        "version": "1.08.X",
+        "options": ""
+      },
+      {
+        "pattern": "60E870050000EB4C",
+        "version": "2.000",
+        "options": ""
+      },
+      {
+        "pattern": "60E872050000EB4C",
+        "version": "2.001",
+        "options": ""
+      },
+      {
+        "pattern": "60E872050000EB3387DB9000",
+        "version": "2.1",
+        "options": ""
+      },
+      {
+        "pattern": "60E93D040000",
+        "version": "2.11",
+        "options": ""
+      },
+      {
+        "pattern": "60E802000000EB095D5581ED39394400C3E93D040000",
+        "version": "2.11b",
+        "options": ""
+      },
+      {
+        "pattern": "60E802000000EB095D5581ED39394400C3E959040000",
+        "version": "2.11c-2.11d",
+        "options": ""
+      },
+      {
+        "pattern": "60E802000000EB095D55",
+        "version": "2.11d",
+        "options": ""
+      },
+      {
+        "pattern": "60E803000000E9EB045D4555C3E801",
+        "version": "2.12-2.42",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "Petite",
+    "source": "db/PE/packer_Petite.2.sg",
+    "coverage": "direct-entry-byte-patterns-only",
+    "patterns": [
+      {
+        "pattern": "9C60E8CA......03..04..05..06..07..08",
+        "version": "1.2",
+        "options": ""
+      },
+      {
+        "pattern": "669C60508D8800F000008D90041600008BDC8BE1",
+        "version": "1.3",
+        "options": ""
+      },
+      {
+        "pattern": "669C60508BD803006854BC00006A00FF50148BCC",
+        "version": "1.4",
+        "options": ""
+      },
+      {
+        "pattern": "64FF350000000064892500000000669C60508BD8",
+        "version": "2.1-2.3",
+        "options": ""
+      },
+      {
+        "pattern": "B8........669C60508D..........68........83",
+        "version": "",
+        "options": ""
+      },
+      {
+        "pattern": "B8........669C60508D88........8d90........8bdc8be168",
+        "version": "1.3, 1.3a",
+        "options": ""
+      },
+      {
+        "pattern": "B8........6A..68........64FF35........648925........669C6050",
+        "version": "2.1",
+        "options": ""
+      },
+      {
+        "pattern": "B8........68........64FF35........648925........669C6050",
+        "version": "2.2",
+        "options": ""
+      },
+      {
+        "pattern": "b8........669c605033db8d90........68........833a..0f84........8b0a",
+        "version": "2.2",
+        "options": ""
+      },
+      {
+        "pattern": "b8........669c60508bd803..68........6a..ff50",
+        "version": "1.4-2.2",
+        "options": ""
+      },
+      {
+        "pattern": "B8........608DA8........68........6A40680030000068........6A00FF90........8944241CBB........8DB5........8BF850",
+        "version": "2.4",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "MEW",
+    "source": "db/PE/packer_MEW.2.sg",
+    "coverage": "direct-entry-byte-patterns-only",
+    "patterns": [
+      {
+        "pattern": "E9........000000020000000C",
+        "version": "SE 1.0",
+        "options": ""
+      },
+      {
+        "pattern": "E9......FF0C",
+        "version": "SE 1.1-1.2",
+        "options": ""
+      },
+      {
+        "pattern": "BE5B00....AD91AD9353AD96565FACC0C0",
+        "version": "",
+        "options": ""
+      },
+      {
+        "pattern": "2BC0E9D090FFFF6AE0E8382B23700EA31C504018186824511007E565F8E8AF7022DD15D8023B558B00EC535756817D0C1060",
+        "version": "10 1.0",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "PECompact",
+    "source": "db/PE/packer_PECompact.2.sg",
+    "coverage": "direct-entry-byte-patterns-only",
+    "patterns": [
+      {
+        "pattern": "EB0668........C39C60BD........B902......B0908DBD........F3AA01AD........FFB5",
+        "version": "0.90-0.92",
+        "options": ""
+      },
+      {
+        "pattern": "EB0668........C39C60E8........5D555881ED........2B85........0185........50B902",
+        "version": "0.94",
+        "options": ""
+      },
+      {
+        "pattern": "33C08BC483C004938BE38B5BFC81",
+        "version": "1.84",
+        "options": ""
+      },
+      {
+        "pattern": "B8........05........5064FF350000000064892500000000CC90909090",
+        "version": "2.0 beta",
+        "options": ""
+      },
+      {
+        "pattern": "B8........80002840",
+        "version": "2.X beta version",
+        "options": ""
+      },
+      {
+        "pattern": "B8........5064FF..........6489..........33C08908",
+        "version": "2.20-3.02",
+        "options": ""
+      },
+      {
+        "pattern": "B8........5553515756528D98........8B5318528BE86A406800100000FF7304",
+        "version": "2.53-2.76",
+        "options": ""
+      },
+      {
+        "pattern": "B8........5064ff35........648925........33c0890800000000",
+        "version": "2.78a-3.11",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "RLPack",
+    "source": "db/PE/packer_RLPack.2.sg",
+    "coverage": "direct-entry-byte-patterns-only; DLL prologue shift (nEP=11) variants excluded",
+    "patterns": [
+      {
+        "pattern": "608BDDE8000000005D9532C095899D80000000B8",
+        "version": "0.7.3 beta",
+        "options": ""
+      },
+      {
+        "pattern": "60E8000000008D6424048B6C24FC8DB5........8D9D........33FF",
+        "version": "1.0 beta",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "tElock",
+    "source": "db/PE/protector_tElock.2.sg",
+    "coverage": "direct-entry-byte-patterns-only",
+    "patterns": [
+      {
+        "pattern": "668BC08D2424EB01EB60EB01EB9CE8000000005E83C6508BFE68",
+        "version": "0.41X",
+        "options": ""
+      },
+      {
+        "pattern": "E90000000060E8000000005883C008",
+        "version": "0.60",
+        "options": ""
+      },
+      {
+        "pattern": "60E802000000CD20E8000000005E2BC9587402",
+        "version": "0.85f",
+        "options": ""
+      },
+      {
+        "pattern": "....E802000000E800E8000000005E2B",
+        "version": "0.90",
+        "options": ""
+      },
+      {
+        "pattern": "668bc08d2424609ce8000000005dd14d",
+        "version": "0.35",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "PELock",
+    "source": "db/PE/protector_PELock.2.sg",
+    "coverage": "direct-entry-byte-patterns-only; .NET excluded per the original script guard",
+    "netExcluded": true,
+    "patterns": [
+      {
+        "pattern": "6A6068........E8........BF94",
+        "version": "2.X",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "NsPack",
+    "source": "db/PE/packer_NsPack.2.sg",
+    "coverage": "direct-entry-byte-patterns-only",
+    "patterns": [
+      {
+        "pattern": "9c60e8..........83....8d8d........8039..0f..........c601..8bc5",
+        "version": "3.7",
+        "options": ""
+      },
+      {
+        "pattern": "9c60e8........5d83ed..8d9d........8a033c..74..8d9d........8a03",
+        "version": "3.1",
+        "options": ""
+      },
+      {
+        "pattern": "9c60e8........5d83ed..8d85........8338..0f..........c700........8bd5",
+        "version": "3.6",
+        "options": ""
+      },
+      {
+        "pattern": "9c60e8........5d83ed..8d85........8038..0f..........c600..8bd5",
+        "version": "3.5",
+        "options": ""
+      },
+      {
+        "pattern": "9c60e8........5db8........2be88db5........8a063c..74..8bf5",
+        "version": "2.9",
+        "options": ""
+      },
+      {
+        "pattern": "9c60e8........5d83ed..8d85........8038..74..8d85........8038..0f84........c600..8bd5",
+        "version": "3.3",
+        "options": ""
+      }
+    ]
+  },
+  {
+    "family": "WinUpack",
+    "source": "db/PE/packer_WinUpack.2.sg",
+    "coverage": "direct-entry-byte-patterns-only",
+    "patterns": [
+      {
+        "pattern": "BE........AD8BF895A533C033",
+        "version": "0.1X/0.20/0.21/0.24 beta",
+        "options": ""
+      },
+      {
+        "pattern": "BE........AD8BF86A0495A533C0AB",
+        "version": "0.21 beta",
+        "options": ""
+      },
+      {
+        "pattern": "BE........AD8BF895AD91F3A5ADB5",
+        "version": "0.24-0.27 beta/0.28 alpha",
+        "options": ""
+      },
+      {
+        "pattern": "6A07BE........AD8BF85995F3A5",
+        "version": "0.22/0.23 beta",
+        "options": ""
+      },
+      {
+        "pattern": "BE........AD50..AD91F3A5",
+        "version": "0.32 beta",
+        "options": "Patch"
+      },
+      {
+        "pattern": "BE........AD50..AD91..F3A5",
+        "version": "0.32 beta",
+        "options": ""
+      },
+      {
+        "pattern": "BE........AD50....AD91F3A5",
+        "version": "0.32 beta",
+        "options": ""
+      },
+      {
+        "pattern": "BE........AD50AD5066BE....6A..BF",
+        "version": "0.34",
+        "options": ""
+      },
+      {
+        "pattern": "BE........FF36E9C3000000",
+        "version": "0.36 beta",
+        "options": ""
+      },
+      {
+        "pattern": "60E809000000..................33C95E870E",
+        "version": "",
+        "options": "Alt stub"
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+import { mkdir, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+const root = new URL('../test-results/fixtures/', import.meta.url);
+await mkdir(root, { recursive: true });
+const commit = '160baa9447c91d53b75e5e108b196d389fa0b06e';
+const path = 'Sample/MPRESS/UnPackMe32_MPRESS.exe';
+const url = `https://raw.githubusercontent.com/unipacker/unipacker/${commit}/${path}`;
+const response = await fetch(url);
+if (!response.ok) throw new Error(`HTTP ${response.status}`);
+const bytes = Buffer.from(await response.arrayBuffer());
+const sha256 = createHash('sha256').update(bytes).digest('hex');
+if (sha256 !== '218d5569194ee018b354c9f717047ae2dac5d6130cdf81eb24f0a9b370600136') throw new Error('Fixture SHA-256 does not match the pinned sample');
+await writeFile(new URL('mpress.exe', root), bytes);
+await writeFile(new URL('manifest.json', root), JSON.stringify({ url, commit, sha256, size: bytes.length, execution: 'never; static analysis only', redistribution: 'excluded from project releases' }, null, 2));
+console.log({ fixture: 'mpress.exe', size: bytes.length, sha256 });
