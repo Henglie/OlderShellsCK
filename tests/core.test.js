@@ -10,6 +10,12 @@ import { detect, DIE_SCOPE } from '../src/core/detect.js';
 import { analyze, capabilities, execute, unpack } from '../src/core/index.js';
 
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
+// 2026-10-30：vendor/die 的 pin 统一按 LF 归一后计算，避免 Windows 的
+// core.autocrlf 让同一条 pin 在不同检出里时过时不过。
+const pinnedDigest = bytes => {
+  const source = Buffer.isBuffer(bytes) ? bytes : Buffer.from(bytes, 'utf8');
+  return digest(Buffer.from(source.toString('latin1').replaceAll('\r\n', '\n'), 'latin1'));
+};
 const coded = code => error => error instanceof AnalysisError && (!code || error.code === code);
 const hex = text => Uint8Array.from(Buffer.from(text, 'hex'));
 const materialize = (pattern, wildcard = 'a5') => hex(pattern.replaceAll('..', wildcard));
@@ -188,8 +194,8 @@ function upstreamFsg(compareEP) {
 test('DIE source hashes, MIT notices and all 44 generated FSG records match the pinned source', async t => {
   assert.equal(manifest.commit, '11cb5cb00f8763426005914ed3d983e729760749');
   assert.equal(manifest.license, 'MIT');
-  assert.equal(digest(Buffer.from(fsgSource)), '0a911be7bb4ec6a83353ef15bb20be3db4487d70552c756a9d8f2ed9bba93fcd');
-  for (const entry of manifest.files) assert.equal(digest(await readFile(new URL(entry.path, vendor))), entry.sha256, entry.path);
+  assert.equal(pinnedDigest(Buffer.from(fsgSource)), '94811f7b60526a3d63426c269a6c24cffae36314fca04735b370a9cc17e434c8');
+  for (const entry of manifest.files) assert.equal(pinnedDigest(await readFile(new URL(entry.path, vendor))), entry.sha256, entry.path);
   assert.match(await readFile(new URL('LICENSE', vendor), 'utf8'), /Copyright \(c\) 2012-2026 hors/);
   assert.match(await readFile(new URL('../licenses/retdec-MIT.txt', import.meta.url), 'utf8'), /Copyright \(c\) 2017 Avast Software/);
   const patterns = [];

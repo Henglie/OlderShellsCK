@@ -9,11 +9,11 @@
     },
     {
       "path": "db/PE/packer_FSG.2.sg",
-      "sha256": "0a911be7bb4ec6a83353ef15bb20be3db4487d70552c756a9d8f2ed9bba93fcd"
+      "sha256": "94811f7b60526a3d63426c269a6c24cffae36314fca04735b370a9cc17e434c8"
     },
     {
       "path": "db/PE/packer_UPX.2.sg",
-      "sha256": "dc22e6b7d1950c2ea919b19925b56796b060dd9b2f40b9a9456af1d2d10449d2"
+      "sha256": "9cf8806d8af40643fd24d41a5fabd304f94b421baaa997a3ca63888d20f6228a"
     },
     {
       "path": "db/PE/packer_MPRESS.2.sg",
@@ -21,27 +21,27 @@
     },
     {
       "path": "db/PE/packer_ASPack.2.sg",
-      "sha256": "cc79344b5e30a8400e47954c6924bcbc1a48e01c900dfd66cc45a406d466f8ac"
+      "sha256": "2a0d88025363ab1f09e62c343e42448524bf5dbcecf5f1695029806f9e500a11"
     },
     {
       "path": "db/PE/packer_Petite.2.sg",
-      "sha256": "8fb6ff88d901daf5647b4702dacd85a4f161446de0b4d8643a1b3d5f2c4aec3d"
+      "sha256": "e128939f547b0f46cd81e8c6dc6746f9ee6e8c5f39ee0620b88f300094785a06"
     },
     {
       "path": "db/PE/packer_MEW.2.sg",
-      "sha256": "8511306b5a719e40bb5c98dc360dc1066e99193891f6aa68b6fa87d435d80ae7"
+      "sha256": "8342e6e8f837251dc850cffdeb11082b42dd0df9a04957c5942542cab96a373e"
     },
     {
       "path": "db/PE/packer_PECompact.2.sg",
-      "sha256": "c67dcbcbb529a59de568c09d6339f7f480b592a106ed539024e2afad854e5bc4"
+      "sha256": "f5a3f391b44139b7159b40233af9b9f4ff1d6c88f4e17473e860a272a1dd1c6b"
     },
     {
       "path": "db/PE/packer_RLPack.2.sg",
-      "sha256": "aa79fc37af4d4da3542ad89510d1bf0b0b56c82d9dc8057656c2242baef7a4e6"
+      "sha256": "0e58e61cc113a930e682a863627383244ec934a56a52635deeaa5504e5419759"
     },
     {
       "path": "db/PE/protector_tElock.2.sg",
-      "sha256": "790ffbc5a025a069dab7c99fa0c6499d17d594a6e14aa617023b3535e62755e2"
+      "sha256": "c4a9286c9a09455d87e4a5777d74f384abe3100d01bce7ee9eaf4d6710253911"
     },
     {
       "path": "db/PE/protector_PELock.2.sg",
